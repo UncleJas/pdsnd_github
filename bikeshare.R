@@ -66,11 +66,11 @@ ggplot(aes(x=hour,y=Trip.Duration/60),data = chi)+
   labs(x="Time",y="Duration in minute")
 
 correlation=cor(h,chi$Trip.Duration/60,method = c("pearson", "kendall", "spearman"))
-summy.fun2<-c('min','25th percentile','mean','median','75th percentile','max','corr')
+summy.fu2<-c('min','25th percentile','mean','median','75th percentile','max','corr')
 #I applied the round()function again to make the result more reasonable since bicycles can only be borrow interger times
-summy.idx2<-c(min(table(hour)),round(quantile(table(hour),c(.25)),digits = 0),round(mean(table(hour)),digits = 0),
+summy.id2<-c(min(table(hour)),round(quantile(table(hour),c(.25)),digits = 0),round(mean(table(hour)),digits = 0),
               round(median(table(hour)),digits = 0),round(quantile(table(hour),c(.75)),digits = 0),max(table(hour)),round(correlation,digits = 2))
-summy2<-data.frame(Summary=summy.fun2,Frequency=summy.idx2)
+summy2<-data.frame(Summary=summy.fu2,Frequency=summy.id2)
 #Count how many bikes have been lent in each hour in the Chicago?
 table(hour)
 #Statistic summary on how many bike have been lent base on hour in Chicago.
