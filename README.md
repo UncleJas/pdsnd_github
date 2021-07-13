@@ -21,4 +21,5 @@ For this project, your goal is to ask and answer three questions about the avail
 1. **Washington**
 2. **Chicago**
 3. **New York** 
+
 This notebook can be submitted directly through the workspace when you are confident in your results.
