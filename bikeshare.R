@@ -15,7 +15,7 @@ library(ggplot2)
 #In order to make my analysis more intuitively, I would like to Use minutes instead of seconds to indicate duration
 ggplot(aes(x=Gender,y=Trip.Duration/60),data = subset(ny,Gender!=""))+
   geom_boxplot()+
-  scale_y_continuous(breaks = seq(0,60,5))+
+  scale_y_continuous(breaks = seq(0,60,3))+
   coord_cartesian(ylim = c(0,60))+
   ggtitle('Usage Duration In The NY')+
   labs(y='Duration In Minutes')
